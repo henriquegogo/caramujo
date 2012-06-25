@@ -14,12 +14,17 @@
 
 @implementation ViewController
 
+UIWebView *webView;
+UINavigationBar *navigationBar;
+UINavigationItem *navigationItem;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     navigationBar = [[UINavigationBar alloc] init];
     navigationItem = [[UINavigationItem alloc] init];
+    navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     navigationBar.items = [NSArray arrayWithObject:navigationItem];
     [self.view addSubview:navigationBar];
     
@@ -39,10 +44,19 @@
      "  title = title || 'Alert';"
      "  location.href = 'alert:' + title + ':' + encodeURI(message);"
      "};"
-
+     
+     "window.showTitle = function () {"
+     "  location.href = 'showTitle:void';"
+     "};"
+     
+     "window.hideTitle = function () {"
+     "  location.href = 'hideTitle:void';"
+     "};"
+     
      "window.setTitle = function (title) {"
      "  location.href = 'title:' + encodeURI(title);"
-     "};"];
+     "};"
+     ];
     
     [webView stringByEvaluatingJavaScriptFromString:@""
      "window.onload = function() {"
@@ -74,15 +88,20 @@
     
     else if ([method isEqual:@"title"]) {
         NSString *title = [[components objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-         
-        webView.frame = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44);
-        navigationBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
-        navigationItem.title = title;
         
-        if ([title isEqual:@""]) {
-            webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-            navigationBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 0);
-        }
+        webView.frame = CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
+        navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 44);
+        navigationItem.title = title;
+    }
+    
+    else if ([method isEqual:@"showTitle"]) {        
+        webView.frame = CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
+        navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 44);
+    }
+    
+    else if ([method isEqual:@"hideTitle"]) {
+        webView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+        navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 0);
     }
 }
 

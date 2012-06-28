@@ -1,3 +1,4 @@
 *.swp
 /tags
 xcuserdata/*
+.DS_Store

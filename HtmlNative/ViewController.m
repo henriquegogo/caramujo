@@ -46,11 +46,11 @@ UINavigationItem *navigationItem;
      "};"
      
      "window.showTitle = function () {"
-     "  location.href = 'showTitle:void';"
+     "  location.href = 'showtitle:void';"
      "};"
      
      "window.hideTitle = function () {"
-     "  location.href = 'hideTitle:void';"
+     "  location.href = 'hidetitle:void';"
      "};"
      
      "window.setTitle = function (title) {"
@@ -77,7 +77,8 @@ UINavigationItem *navigationItem;
     NSString *method = [url scheme];
     NSArray *components = [[url absoluteString] componentsSeparatedByString:@":"];
     
-    if ([method isEqual:@"alert"]) {        
+    if ([method isEqual:@"alert"]) {
+        NSLog(@"Alertou");
         NSString *title = [[components objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSString *message = [[components objectAtIndex:2] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
@@ -87,6 +88,7 @@ UINavigationItem *navigationItem;
     }
     
     else if ([method isEqual:@"title"]) {
+        NSLog(@"Setou o título");
         NSString *title = [[components objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         webView.frame = CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
@@ -94,12 +96,14 @@ UINavigationItem *navigationItem;
         navigationItem.title = title;
     }
     
-    else if ([method isEqual:@"showTitle"]) {        
+    else if ([method isEqual:@"showtitle"]) {       
+        NSLog(@"Mostrou o título");
         webView.frame = CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
         navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 44);
     }
     
-    else if ([method isEqual:@"hideTitle"]) {
+    else if ([method isEqual:@"hidetitle"]) {
+        NSLog(@"Escondeu o título");
         webView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
         navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 0);
     }

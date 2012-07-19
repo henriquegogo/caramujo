@@ -40,21 +40,30 @@ UINavigationItem *navigationItem;
     [webView loadRequest:requestObj];
     
     [webView stringByEvaluatingJavaScriptFromString:@""
+     "window.nativebridge = function(method) {"
+     "  var args = [];"
+     "  for (var i = 1; i < arguments.length; i++) {"
+     "      var item = encodeURI(arguments[i]);"
+     "      args.push(item);"
+     "  }"
+     "  location.href = method + ':' + args.join(':');"
+     "};"
+     
      "window.alert = function (message, title) {"
      "  title = title || 'Alert';"
-     "  location.href = 'alert:' + title + ':' + encodeURI(message);"
+     "  nativebridge('alert', title, message);"
      "};"
      
      "window.showTitle = function () {"
-     "  location.href = 'showtitle:void';"
+     "  nativebridge('showtitle');"
      "};"
      
      "window.hideTitle = function () {"
-     "  location.href = 'hidetitle:void';"
+     "  nativebridge('hidetitle');"
      "};"
      
      "window.setTitle = function (title) {"
-     "  location.href = 'title:' + encodeURI(title);"
+     "  nativebridge('title', title);"
      "};"
      ];
     

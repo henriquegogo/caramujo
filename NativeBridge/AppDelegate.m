@@ -1,27 +1,28 @@
 //
 //  AppDelegate.m
-//  HtmlNative
+//  NativeBridge
 //
-//  Created by Henrique Gogó on 19/06/12.
+//  Created by Henrique Gogó on 07/08/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    UIViewController *mainViewController = [[MainViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    self.window.rootViewController = navigationController;
+    
     return YES;
 }
 

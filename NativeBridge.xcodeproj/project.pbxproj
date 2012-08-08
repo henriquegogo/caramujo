@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66FE730715D1C5BA00AD36EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FE730615D1C5BA00AD36EF /* UIKit.framework */; };
+		66FE730915D1C5BA00AD36EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FE730815D1C5BA00AD36EF /* Foundation.framework */; };
+		66FE730B15D1C5BA00AD36EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FE730A15D1C5BA00AD36EF /* CoreGraphics.framework */; };
+		66FE731115D1C5BA00AD36EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FE730F15D1C5BA00AD36EF /* InfoPlist.strings */; };
+		66FE731315D1C5BA00AD36EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE731215D1C5BA00AD36EF /* main.m */; };
+		66FE731715D1C5BA00AD36EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE731615D1C5BA00AD36EF /* AppDelegate.m */; };
+		66FE732715D1C60A00AD36EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE732515D1C60A00AD36EF /* MainViewController.m */; };
+		66FE732815D1C60A00AD36EF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66FE732615D1C60A00AD36EF /* MainViewController.xib */; };
+		66FE732B15D2060B00AD36EF /* NativeBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FE732A15D2060B00AD36EF /* NativeBridge.m */; };
+		66FE732E15D21F0700AD36EF /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 66FE732D15D21F0700AD36EF /* Assets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66FE730215D1C5B900AD36EF /* NativeBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FE730615D1C5BA00AD36EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		66FE730815D1C5BA00AD36EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66FE730A15D1C5BA00AD36EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		66FE730E15D1C5BA00AD36EF /* NativeBridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NativeBridge-Info.plist"; sourceTree = "<group>"; };
+		66FE731015D1C5BA00AD36EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66FE731215D1C5BA00AD36EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66FE731415D1C5BA00AD36EF /* NativeBridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeBridge-Prefix.pch"; sourceTree = "<group>"; };
+		66FE731515D1C5BA00AD36EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66FE731615D1C5BA00AD36EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66FE732415D1C60A00AD36EF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Views/MainViewController.h; sourceTree = "<group>"; };
+		66FE732515D1C60A00AD36EF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Views/MainViewController.m; sourceTree = "<group>"; };
+		66FE732615D1C60A00AD36EF /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Views/MainViewController.xib; sourceTree = "<group>"; };
+		66FE732915D2060B00AD36EF /* NativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeBridge.h; sourceTree = "<group>"; };
+		66FE732A15D2060B00AD36EF /* NativeBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeBridge.m; sourceTree = "<group>"; };
+		66FE732D15D21F0700AD36EF /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66FE72FF15D1C5B900AD36EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FE730715D1C5BA00AD36EF /* UIKit.framework in Frameworks */,
+				66FE730915D1C5BA00AD36EF /* Foundation.framework in Frameworks */,
+				66FE730B15D1C5BA00AD36EF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66FE72F715D1C5B900AD36EF = {
+			isa = PBXGroup;
+			children = (
+				66FE732D15D21F0700AD36EF /* Assets */,
+				66FE730C15D1C5BA00AD36EF /* NativeBridge */,
+				66FE730515D1C5B900AD36EF /* Frameworks */,
+				66FE730315D1C5B900AD36EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66FE730315D1C5B900AD36EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66FE730215D1C5B900AD36EF /* NativeBridge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66FE730515D1C5B900AD36EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66FE730615D1C5BA00AD36EF /* UIKit.framework */,
+				66FE730815D1C5BA00AD36EF /* Foundation.framework */,
+				66FE730A15D1C5BA00AD36EF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66FE730C15D1C5BA00AD36EF /* NativeBridge */ = {
+			isa = PBXGroup;
+			children = (
+				66FE732315D1C5F800AD36EF /* Views */,
+				66FE731515D1C5BA00AD36EF /* AppDelegate.h */,
+				66FE731615D1C5BA00AD36EF /* AppDelegate.m */,
+				66FE732915D2060B00AD36EF /* NativeBridge.h */,
+				66FE732A15D2060B00AD36EF /* NativeBridge.m */,
+				66FE730D15D1C5BA00AD36EF /* Supporting Files */,
+			);
+			path = NativeBridge;
+			sourceTree = "<group>";
+		};
+		66FE730D15D1C5BA00AD36EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66FE730E15D1C5BA00AD36EF /* NativeBridge-Info.plist */,
+				66FE730F15D1C5BA00AD36EF /* InfoPlist.strings */,
+				66FE731215D1C5BA00AD36EF /* main.m */,
+				66FE731415D1C5BA00AD36EF /* NativeBridge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66FE732315D1C5F800AD36EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66FE732415D1C60A00AD36EF /* MainViewController.h */,
+				66FE732515D1C60A00AD36EF /* MainViewController.m */,
+				66FE732615D1C60A00AD36EF /* MainViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66FE730115D1C5B900AD36EF /* NativeBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66FE731A15D1C5BA00AD36EF /* Build configuration list for PBXNativeTarget "NativeBridge" */;
+			buildPhases = (
+				66FE72FE15D1C5B900AD36EF /* Sources */,
+				66FE72FF15D1C5B900AD36EF /* Frameworks */,
+				66FE730015D1C5B900AD36EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativeBridge;
+			productName = NativeBridge;
+			productReference = 66FE730215D1C5B900AD36EF /* NativeBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66FE72F915D1C5B900AD36EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 66FE72FC15D1C5B900AD36EF /* Build configuration list for PBXProject "NativeBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 66FE72F715D1C5B900AD36EF;
+			productRefGroup = 66FE730315D1C5B900AD36EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66FE730115D1C5B900AD36EF /* NativeBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66FE730015D1C5B900AD36EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FE731115D1C5BA00AD36EF /* InfoPlist.strings in Resources */,
+				66FE732815D1C60A00AD36EF /* MainViewController.xib in Resources */,
+				66FE732E15D21F0700AD36EF /* Assets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66FE72FE15D1C5B900AD36EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FE731315D1C5BA00AD36EF /* main.m in Sources */,
+				66FE731715D1C5BA00AD36EF /* AppDelegate.m in Sources */,
+				66FE732715D1C60A00AD36EF /* MainViewController.m in Sources */,
+				66FE732B15D2060B00AD36EF /* NativeBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66FE730F15D1C5BA00AD36EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FE731015D1C5BA00AD36EF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66FE731815D1C5BA00AD36EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66FE731915D1C5BA00AD36EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66FE731B15D1C5BA00AD36EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeBridge/NativeBridge-Prefix.pch";
+				INFOPLIST_FILE = "NativeBridge/NativeBridge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66FE731C15D1C5BA00AD36EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeBridge/NativeBridge-Prefix.pch";
+				INFOPLIST_FILE = "NativeBridge/NativeBridge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66FE72FC15D1C5B900AD36EF /* Build configuration list for PBXProject "NativeBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FE731815D1C5BA00AD36EF /* Debug */,
+				66FE731915D1C5BA00AD36EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66FE731A15D1C5BA00AD36EF /* Build configuration list for PBXNativeTarget "NativeBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FE731B15D1C5BA00AD36EF /* Debug */,
+				66FE731C15D1C5BA00AD36EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66FE72F915D1C5B900AD36EF /* Project object */;
+}
